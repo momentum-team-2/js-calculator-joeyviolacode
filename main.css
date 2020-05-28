@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding 0;
+    padding: 0;
     
 }
 
@@ -18,9 +18,13 @@ body {
     padding: 2%;
 }
 
-input {
+.display-container {
     font-size: 24px;
+    height: 30px;
     width: 95%;
+    font-family: 'Orbitron', sans-serif;
+    background: white;
+    text-align: right;
 }
 
 .button-container {
@@ -34,5 +38,6 @@ button {
     width: 70px;
     height: 70px;
     margin: 2px;
+    font-size : 30px;
 }
 
