@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding 0;
+    
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.calc-container {
+    background-color: brown;
+    height: 600px;
+    width: 360px;
+    margin: 10% auto;
+    padding: 2%;
+}
+
+input {
+    font-size: 24px;
+    width: 95%;
+}
+
+.button-container {
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    margin: 2px;
+}
+
