@@ -69,7 +69,7 @@ function evaluateInput() {
     }
 }
 
-//consumes two characters if the first is a space to account for extra padding around operators
+//consumes two characters if the first is a space to account for extra padding around operators...still oddity if someone enters a bunch of operators back to back and tries to backspace, but that's an outside case, as it's not good syntax anyway.
 function backspace() {
     if (text.length > 0) {
         if (text[text.length - 1] === " ") {text = text.slice(0, -1)}
