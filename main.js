@@ -69,8 +69,10 @@ function evaluateInput() {
     }
 }
 
+//consumes two characters if the first is a space to account for extra padding around operators
 function backspace() {
     if (text.length > 0) {
+        if (text[text.length - 1] === " ") {text = text.slice(0, -1)}
         text = text.slice(0, -1)
         setInnerHTML(text)
     }
