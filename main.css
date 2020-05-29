@@ -50,6 +50,7 @@ button {
     margin: 4px;
     font-size : 30px;
     box-shadow: 0 2px 4px 0;
+    border-radius: 5px;
 }
 
 button:active {
