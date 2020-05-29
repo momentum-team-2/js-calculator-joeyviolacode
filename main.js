@@ -2,35 +2,45 @@ let inputLocation = document.querySelector(".display-container")
 let text = ""
 
 let inputButtons = document.querySelectorAll(".input-button")
-inputButtons[0].addEventListener("click", updateInput())
+for (let button of inputButtons) {
+    button.addEventListener("click", updateInput)
+}
+document.querySelector("#equals").addEventListener("click", evaluateInput)
+document.querySelector("#C").addEventListener("click", resetInput)
+document.querySelector("#BS").addEventListener("click", backspace)
 
-
-/*for (let button of inputButtons) {
-    //let key = button.id
-    //console.log(key)
-    button.addEventListener("click", updateInput(event))
-}*/
 
 
 //Basic functions for updating the input in various ways
 function updateInput(event) {
-    //console.log(event)
-    //newText = 
-    text += event.target.id
-    inputLocation.innerHTML = `<p class="display">${text}</p>`
+    if (event.target.id === "." && text.length === 0) {
+        text += "0."
+    } else {
+        text += event.target.id
+    }
+    setInnerHTML(text)
 }
 
 function resetInput() {
     text = ""
+    setInnerHTML(text)
 }
 
 function evaluateInput() {
-    return eval(inputStr)
+    let value = eval(text)
+    resetInput()
+    text = value;
+    setInnerHTML(value)
 }
 
 function backspace() {
-    if (inputStr.length > 0) {
-        inputStr.slice(0, -1)
+    if (text.length > 0) {
+        text = text.slice(0, -1)
+        setInnerHTML(text)
     }
+}
+
+function setInnerHTML(value) {
+    inputLocation.innerHTML = `<p class="display">${value}</p>`
 }
 
